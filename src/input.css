@@ -14,6 +14,7 @@
   --color-dark-blue: #006cb5;
   --color-pink: #ee5ba1;
   --color-yellow: #fff001;
+  --color-yello2: #f4ec0a;
   --color-dark-yellow: #f4ec0a;
   --color-light-red: #e94351;
   --color-vivid-orange: #f9a21d;
@@ -47,7 +48,7 @@
   }
   h3,
   .h3 {
-    @apply text-[48px] font-heading font-normal text-black;
+    @apply text-[48px] 2xs:text-[32px] lg:text-[48px] 2xs:leading-[38px] lg:leading-[58px] font-heading font-normal text-black;
   }
   h4,
   .h4 {
@@ -60,11 +61,14 @@
   p {
     @apply font-body text-base text-black2 leading-5;
   }
+  img {
+    @apply w-full h-full object-cover;
+  }
 }
 
 @layer components {
   .custom-btn {
-    @apply rounded-[20px] uppercase text-white cursor-pointer transition duration-300 ease-in-out hover:text-green hover:bg-white bg-green font-bold py-2.5 px-7 text-base font-body leading-5;
+    @apply rounded-[20px] uppercase text-white cursor-pointer transition duration-300 ease-in-out hover:text-white hover:bg-[#14532d] bg-green font-bold py-2.5 px-7 text-base font-body leading-5;
   }
   .custom-orange-btn {
     @apply rounded-[20px] uppercase tracking-[0.006em] text-white cursor-pointer transition duration-300 ease-in-out hover:text-orange hover:bg-white hover:border-2 hover:border-orange bg-orange font-bold py-2.5 px-7 text-base font-body leading-5;
@@ -74,6 +78,9 @@
   }
   .custom-light-blue-btn {
     @apply rounded-[20px] uppercase tracking-[0.006em] text-white cursor-pointer transition duration-300 ease-in-out hover:text-lightblue hover:bg-white bg-lightblue hover:border-2 hover:border-lightblue font-bold py-2.5 px-7 text-base font-body leading-5;
+  }
+  .custom-white-btn {
+    @apply rounded-[20px] uppercase tracking-[0.006em] text-green cursor-pointer transition duration-300 ease-in-out hover:text-white hover:bg-green bg-white font-bold py-2.5 px-7 text-base font-body leading-5;
   }
 }
 
@@ -86,6 +93,9 @@
   }
   .container-max-1312 {
     @apply px-[100px] 2xs:px-0 lg:px-[60px] xl:px-[100px] w-full;
+  }
+  .container-max-1000 {
+    @apply max-w-[1000px];
   }
   .mobile-links li {
     @apply px-8 font-bold font-body;
@@ -111,7 +121,7 @@
   .swiper-navigation-icon {
     @apply w-5! h-5!;
   }
-  .swiper-button-prev svg{
+  .swiper-button-prev svg {
     @apply font-bold!;
   }
   .swiper-scrollbar-drag {
@@ -119,6 +129,27 @@
   }
   .swiper-scrollbar {
     @apply h-2.5!;
+  }
+  footer a {
+    @apply font-bold leading-5 hover:text-green transition duration-300 ease-in-out;
+  }
+  footer .icon {
+    @apply hover:bg-yello2 cursor-pointer bg-green rounded-full h-fit transition duration-300 ease-in-out;
+  }
+  .flavorimg {
+    @apply lg:w-[440px]! 2xs:w-[250px]!;
+  }
+  footer input {
+    @apply rounded-[20px] bg-white px-7 py-2 border-2 border-green leading-5 italic max-w-[490px] w-full mt-[22px] 2xs:justify-self-center;
+  }
+  .testnomial-contant-main {
+    @apply lg:px-7 lg:py-[47px] 2xs:px-[30px];
+  }
+  .absolute-card{
+    @apply after:absolute after:w-full after:h-full after:inset-0 after:z-50;
+  }
+  .select-contant{
+    @apply flex cursor-pointer items-center justify-between rounded-[20px] border-2 border-green bg-white px-7 py-2.5;
   }
 }
 

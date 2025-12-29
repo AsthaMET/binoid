@@ -136,7 +136,7 @@ var swiper = new Swiper(".choose-you-sip", {
 });
 
 new Swiper(".testimonialSwiper", {
-  slidesPerView: "auto",
+  slidesPerView: 'auto',
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
