@@ -56,7 +56,7 @@
   }
   h5,
   .h5 {
-    @apply text-[20px] font-body font-normal;
+    @apply text-[20px] font-body font-normal 2xs:leading-[29px] lg:leading-6;
   }
   p {
     @apply font-body text-base text-black2 leading-5;
@@ -97,13 +97,13 @@
   .container-max-1000 {
     @apply max-w-[1000px];
   }
-  .mobile-links li {
+  header .mobile-links li {
     @apply px-8 font-bold font-body;
   }
   .hero-section span {
     @apply font-bold text-black;
   }
-  .icon {
+  header .icon {
     @apply flex gap-10 2xs:gap-5 xl:gap-10;
   }
   .next-evaluation-Socializing .feature-main {
@@ -137,15 +137,15 @@
     @apply hover:bg-yello2 cursor-pointer bg-green rounded-full h-fit transition duration-300 ease-in-out;
   }
   .flavorimg {
-    @apply lg:w-[440px]! 2xs:w-[250px]!;
+    @apply lg:w-[440px]! 2xs:w-[280px]!;
   }
   footer input {
     @apply rounded-[20px] bg-white px-7 py-2 border-2 border-green leading-5 italic max-w-[490px] w-full mt-[22px] 2xs:justify-self-center;
   }
-  .testnomial-contant-main {
+  .testomonial .testnomial-contant-main {
     @apply lg:px-7 lg:py-[47px] 2xs:px-[30px];
   }
-  .absolute-card{
+  .choose-your-sip .absolute-card{
     @apply after:absolute after:w-full after:h-full after:inset-0 after:z-50;
   }
   .select-contant{
@@ -167,7 +167,7 @@
 
 .fixed-header {
   position: fixed;
-  top: 46px;
+  top: 43px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -196,17 +196,17 @@
 }
 
 .dark-blue-gradiant {
-  background: linear-gradient(0deg, #006cb5, #006cb5),
+  background-image: linear-gradient(0deg, #006cb5, #006cb5),
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
 }
 .orange-gradiant {
-  background: linear-gradient(0deg, #f26422, #f26422),
+  background-image: linear-gradient(0deg, #f26422, #f26422),
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
 }
 .lightblue-gradiant {
-  background: linear-gradient(0deg, #01bcf1, #01bcf1),
+  background-image: linear-gradient(0deg, #01bcf1, #01bcf1),
     linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
 }

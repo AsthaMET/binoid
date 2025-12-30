@@ -73,9 +73,9 @@ window.addEventListener("scroll", () => {
   const paths = closeIcon.querySelectorAll("path");
   let targetTop = "";
   if (isLargeScreen) {
-    targetTop = isScrolled ? "140px" : "143px";
+    targetTop = isScrolled ? "137px" : "122px";
   } else {
-    targetTop = isScrolled ? "119px" : "146px";
+    targetTop = isScrolled ? "115px" : "117px";
   }
   mobileMenu.style.setProperty("top", targetTop, "important");
   paths.forEach((path) => {
@@ -136,7 +136,7 @@ var swiper = new Swiper(".choose-you-sip", {
 });
 
 new Swiper(".testimonialSwiper", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -162,30 +162,29 @@ new Swiper(".testimonialSwiper", {
 });
 
 var swiper = new Swiper(".all-flavor-swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 40,
+  slidesPerView: 1,
+  spaceBetween: 0,
   centeredSlides: true,
-  centeredSlidesBounds: true,
-  watchOverflow: true,
   scrollbar: {
     el: ".swiper-scrollbar",
     hide: false,
   },
   breakpoints: {
     320: {
-      slidesPerView: 1.5,
+      slidesPerView: 'auto',
       spaceBetween: 20,
       centeredSlides: true,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 20,
-      centeredSlides: true,
+      centeredSlides: false,
     },
     1280: {
-      slidesPerView: 2.3,
+      slidesPerView: 3.5,
       spaceBetween: 20,
       centeredSlides: false,
     },
   },
 });
+

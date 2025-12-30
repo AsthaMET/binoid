@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Binoid</title>
   <link href="./styles.css" rel="stylesheet" />
-  
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,7 +18,7 @@
 <body>
 
   <div
-    class="announcement-bar font-montserrat font-bold text-white bg-black container-lg text-center md:py-3.5 2xs:text-[12px] xl:text-base 2xs:py-3.5">
+    class="announcement-bar font-montserrat font-bold text-white bg-black container-lg text-center md:py-3.5 2xs:text-[12px] xl:text-base 2xs:py-3.5 2xs:leading-[15px] lg:leading-5">
     This is the first example of a sitewide notice.
   </div>
 
@@ -62,6 +62,7 @@
           </svg>
         </a>
       </div>
+
 
       <!-- logo -->
       <!--  -->
@@ -152,13 +153,13 @@
 
   <section class="hero-section">
     <div
-      class="bg-[url(./assets/Image/hero-bg.jpg)] bg-center bg-cover img-fit 2xs:h-full min-[1400px]:h-[calc(100vh-48px)]! relative 2xs:pb-10 min-[1400px]:pb-0">
+      class="bg-[url(./assets/Image/hero-bg.jpg)] bg-center bg-cover img-fit 2xs:h-full min-[1400px]:h-full relative 2xs:pb-10 min-[1400px]:pb-[81px]">
       <div class="absolute bottom-0 z-30">
         <div class="opacity-8"><img src="./assets/Image/hero-bg-pattern.png" alt="main"
             class="2xs:h-[264px] md:h-full object-cover"></div>
       </div>
       <div
-        class="justify-self-center pt-[143px] 2xs:pt-[117px] md:pt-[130px] xl:pt-[143px] 2xs:px-[25px] lg:px-0  md:max-w-[500px] xl:max-w-[749px]">
+        class="justify-self-center pt-[143px] 2xs:pt-[117px] md:pt-[130px] xl:pt-[143px] 2xs:px-[25px] lg:px-0  min-[641px]:max-w-[500px] min-[1400px]:max-w-[749px]">
         <img src="./assets/Image/hero-img.png" alt="main">
       </div>
       <div class="relative justify-self-center 2xs:p-3.5 md:px-5 lg:p-0 2xs:mt-[47px] lg:mt-0 2xs:mx-[30px] md:mx-0 max-w-[960px] text-center
@@ -179,11 +180,6 @@
   </section>
 
   <section class="next-evaluation-Socializing">
-    <!-- <div
-  class="lg:w-[41.29%] 2xs:w-full sm:w-[500px] 2xs:px-[18px] sm:px-0 2xs:self-center relative
-         before:content-[''] before:absolute before:inset-0
-         before:bg-no-repeat before:bg-center before:bg-contain
-         before:-z-10"> -->
     <div
       class="flex gap-[55px] py-[100px] 2xs:py-20 pl-[100px] pr-[140px] 2xs:px-[30px] xl:pl-[100px] xl:pr-[140px] 2xs:flex-col-reverse lg:flex-row">
       <div class="lg:w-[41.50%] 2xs:px-[18px] sm:px-0 h-full 2xs:self-center relative
@@ -300,7 +296,9 @@
           conversation, every laugh, and every vibe. Effortless, refreshing, and made for the moments that matter and
           let the good times roll.</p>
       </div>
-      <div class="lg:w-[41.50%] 2xs:px-[18px] sm:px-0 h-full 2xs:self-center relative
+      <div class="lg:w-[41.50%] 2xs:px-[18px] sm:px-0 h-full 2xs:self-center">
+        <img src=" ./assets/Image/wateromelon.png" alt="wateromelon" class="relative z-20">
+        <div class="relative
             before:content-['']
             before:absolute before:inset-0
             before:bg-[url('./assets/Image/bg-blue.png')]
@@ -309,16 +307,14 @@
             before:bg-no-repeat
             before:z-10
             ">
-        <img src=" ./assets/Image/wateromelon.png" alt="wateromelon" class="relative z-20 ">
+        </div>
       </div>
-    </div>
   </section>
 
   <section>
     <div class="flex flex-col md:flex-row gap-10 2xs:gap-5 container-max-1232 2xs:my-20 xl:my-[100px]">
       <div class="w-full">
-        <div
-          class="select-contant">
+        <div class="select-contant">
           <p class="font-bold">What does it feel like?</p>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_23617_2140)">
@@ -336,8 +332,7 @@
       </div>
 
       <div class="w-full">
-        <div
-          class="select-contant">
+        <div class="select-contant">
           <p class="font-bold">Is this legal?</p>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_23617_2140)">
@@ -355,8 +350,7 @@
       </div>
 
       <div class="w-full">
-        <div
-          class="select-contant">
+        <div class="select-contant">
           <p class="font-bold">Will I get anxious or paranoid?</p>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_23617_2140)">
@@ -384,7 +378,7 @@
             <div class="swiper-slide relative group">
               <div class="relative">
                 <div class="relative z-40 justify-items-center pt-[60px] 2xs:pt-12 xl:pt-[60px]">
-                  <div class="absolute inset-0 -z-10 w-full h-full lightblue-gradiant rounded-[20px]"></div>
+                  <div class="absolute inset-0 -z-10 w-full h-full dark-blue-gradiant rounded-[20px]"></div>
                   <div class="2xs:w-[170px] lg:w-auto"><img src="./assets/Image/sip1.png" alt="sip1"
                       class="object-contain"></div>
                 </div>
@@ -715,10 +709,10 @@
 
           <div class="flex justify-center gap-8 2xs:mt-5 lg:mt-10 lg:hidden">
             <div>
-              <div class="swiper-button-prev w-fit! h-fit! static! text-green!"></div>
+              <div class="swiper-button-prev w-fit! h-fit! mt-5! static! text-green!"></div>
             </div>
             <div>
-              <div class="swiper-button-next w-fit! h-fit! static! text-green!"></div>
+              <div class="swiper-button-next w-fit! h-fit! mt-5! static! text-green!"></div>
             </div>
           </div>
         </div>
@@ -750,6 +744,9 @@
             <div class="swiper-slide flavorimg"><img src="./assets/Image/flavor2.png" alt="flavor1"></div>
             <div class="swiper-slide flavorimg"><img src="./assets/Image/flavor1.png" alt="flavor1"></div>
             <div class="swiper-slide flavorimg"><img src="./assets/Image/flavor2.png" alt="flavor1"></div>
+            <div class="swiper-slide flavorimg"><img src="./assets/Image/flavor1.png" alt="flavor1"></div>
+            <div class="swiper-slide flavorimg"><img src="./assets/Image/flavor2.png" alt="flavor1"></div>
+            <div class="swiper-slide flavorimg"><img src="./assets/Image/flavor1.png" alt="flavor1"></div>
           </div>
           <div class="mt-[55px] static">
             <div class="swiper-scrollbar"></div>
@@ -832,7 +829,7 @@
             <a href="#" class="transition-none hover:text-white">Shop Now</a>
           </div>
         </div>
-        <div class="grid grid-cols-5 gap-5 mt-7 2xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div class="grid grid-cols-5 gap-5 mt-7 2xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <div><img src="./assets/Image/footer1.png" alt="card1"></div>
           <div><img src="./assets/Image/footer2.png" alt="card2"></div>
           <div><img src="./assets/Image/footer3.png" alt="card3"></div>
