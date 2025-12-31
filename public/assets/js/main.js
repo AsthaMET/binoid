@@ -73,9 +73,9 @@ window.addEventListener("scroll", () => {
   const paths = closeIcon.querySelectorAll("path");
   let targetTop = "";
   if (isLargeScreen) {
-    targetTop = isScrolled ? "137px" : "143px";
+    targetTop = isScrolled ? "117px" : "143px";
   } else {
-    targetTop = isScrolled ? "115px" : "117px";
+    targetTop = isScrolled ? "115px" : "144px";
   }
   mobileMenu.style.setProperty("top", targetTop, "important");
   paths.forEach((path) => {
