@@ -207,9 +207,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .-z-10 {
-    z-index: calc(10 * -1);
-  }
   .z-10 {
     z-index: 10;
   }
@@ -284,6 +281,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .w-\[2\] {
+    width: 2;
   }
   .w-\[300px\] {
     width: 300px;
@@ -388,9 +388,6 @@
   .rounded-\[10px\] {
     border-radius: 10px;
   }
-  .rounded-\[20px\] {
-    border-radius: 20px;
-  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -466,9 +463,6 @@
   }
   .py-\[100px\] {
     padding-block: 100px;
-  }
-  .pt-\[60px\] {
-    padding-top: 60px;
   }
   .pt-\[143px\] {
     padding-top: 143px;
@@ -814,6 +808,11 @@
       width: 170px;
     }
   }
+  .\32 xs\:w-\[250px\] {
+    @media (width >= 320px) {
+      width: 250px;
+    }
+  }
   .\32 xs\:w-full {
     @media (width >= 320px) {
       width: 100%;
@@ -822,6 +821,11 @@
   .\32 xs\:max-w-\[115px\] {
     @media (width >= 320px) {
       max-width: 115px;
+    }
+  }
+  .\32 xs\:max-w-\[250px\] {
+    @media (width >= 320px) {
+      max-width: 250px;
     }
   }
   .\32 xs\:grid-cols-2 {
@@ -949,11 +953,6 @@
       padding-block: 6.5px;
     }
   }
-  .\32 xs\:pt-12 {
-    @media (width >= 320px) {
-      padding-top: calc(var(--spacing) * 12);
-    }
-  }
   .\32 xs\:pt-\[117px\] {
     @media (width >= 320px) {
       padding-top: 117px;
@@ -1044,6 +1043,11 @@
   .sm\:w-\[70\%\] {
     @media (width >= 40rem) {
       width: 70%;
+    }
+  }
+  .sm\:w-auto {
+    @media (width >= 40rem) {
+      width: auto;
     }
   }
   .sm\:px-0 {
@@ -1384,11 +1388,6 @@
   .xl\:px-\[100px\] {
     @media (width >= 80rem) {
       padding-inline: 100px;
-    }
-  }
-  .xl\:pt-\[60px\] {
-    @media (width >= 80rem) {
-      padding-top: 60px;
     }
   }
   .xl\:pt-\[143px\] {
@@ -1982,6 +1981,26 @@
       content: var(--tw-content);
       width: 100%;
     }
+  }
+  .choose-your-sip .main-img {
+    position: relative;
+    z-index: 40;
+    justify-items: center;
+    padding-top: 60px;
+    @media (width >= 320px) {
+      padding-top: calc(var(--spacing) * 12);
+    }
+    @media (width >= 80rem) {
+      padding-top: 60px;
+    }
+  }
+  .choose-your-sip .before-container {
+    position: absolute;
+    inset: calc(var(--spacing) * 0);
+    z-index: calc(10 * -1);
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
   }
   .select-contant {
     display: flex;

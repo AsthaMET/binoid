@@ -148,6 +148,12 @@
   .choose-your-sip .absolute-card {
     @apply after:absolute after:w-full after:h-full after:inset-0 after:z-50;
   }
+  .choose-your-sip .main-img {
+    @apply relative z-40 justify-items-center pt-[60px] 2xs:pt-12 xl:pt-[60px];
+  }
+  .choose-your-sip .before-container {
+    @apply absolute inset-0 -z-10 w-full h-full rounded-[20px];
+  }
   .select-contant {
     @apply flex cursor-pointer items-center justify-between rounded-[20px] border-2 border-green bg-white px-7 py-2;
   }
