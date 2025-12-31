@@ -83,6 +83,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
+// Serch-box
 document.addEventListener("DOMContentLoaded", () => {
   const searchIcon = document.getElementById("search-icon");
   const searchBox = document.getElementById("search-box");
@@ -100,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// choose-your-sip
 var swiper = new Swiper(".choose-you-sip", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -135,6 +138,7 @@ var swiper = new Swiper(".choose-you-sip", {
   },
 });
 
+// testnomial
 new Swiper(".testimonialSwiper", {
   slidesPerView: "auto",
   spaceBetween: 30,
@@ -161,6 +165,7 @@ new Swiper(".testimonialSwiper", {
   },
 });
 
+// all-flavor-swiper
 var swiper = new Swiper(".all-flavor-swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
