@@ -282,9 +282,6 @@
   .h-full {
     height: 100%;
   }
-  .w-\[2\] {
-    width: 2;
-  }
   .w-\[300px\] {
     width: 300px;
   }
@@ -404,6 +401,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
   .border-white {
     border-color: var(--color-white);
   }
@@ -463,9 +464,6 @@
   }
   .py-\[100px\] {
     padding-block: 100px;
-  }
-  .pt-\[143px\] {
-    padding-top: 143px;
   }
   .pr-0 {
     padding-right: calc(var(--spacing) * 0);
@@ -808,11 +806,6 @@
       width: 170px;
     }
   }
-  .\32 xs\:w-\[250px\] {
-    @media (width >= 320px) {
-      width: 250px;
-    }
-  }
   .\32 xs\:w-full {
     @media (width >= 320px) {
       width: 100%;
@@ -821,11 +814,6 @@
   .\32 xs\:max-w-\[115px\] {
     @media (width >= 320px) {
       max-width: 115px;
-    }
-  }
-  .\32 xs\:max-w-\[250px\] {
-    @media (width >= 320px) {
-      max-width: 250px;
     }
   }
   .\32 xs\:grid-cols-2 {
@@ -1043,11 +1031,6 @@
   .sm\:w-\[70\%\] {
     @media (width >= 40rem) {
       width: 70%;
-    }
-  }
-  .sm\:w-auto {
-    @media (width >= 40rem) {
-      width: auto;
     }
   }
   .sm\:px-0 {
@@ -1553,12 +1536,13 @@
   }
 }
 @layer components {
-  .custom-btn {
+  .btn {
     cursor: pointer;
     border-radius: 20px;
-    background-color: var(--color-green);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
     padding-inline: calc(var(--spacing) * 7);
-    padding-block: calc(var(--spacing) * 2.5);
+    padding-block: calc(var(--spacing) * 2);
     font-family: var(--font-body);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -1566,7 +1550,8 @@
     line-height: calc(var(--spacing) * 5);
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-    color: var(--color-white);
+    --tw-tracking: 0.006em;
+    letter-spacing: 0.006em;
     text-transform: uppercase;
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1575,6 +1560,14 @@
     transition-duration: 300ms;
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .custom-btn {
+    background-color: var(--color-green);
+    padding-inline: calc(var(--spacing) * 7);
+    padding-block: calc(var(--spacing) * 2.5);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
     &:hover {
       @media (hover: hover) {
         background-color: #14532d;
@@ -1587,32 +1580,9 @@
     }
   }
   .custom-orange-btn {
-    cursor: pointer;
-    border-radius: 20px;
-    border-style: var(--tw-border-style);
-    border-width: 2px;
     border-color: var(--color-orange);
     background-color: var(--color-orange);
-    padding-inline: calc(var(--spacing) * 7);
-    padding-block: calc(var(--spacing) * 2);
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-    --tw-tracking: 0.006em;
-    letter-spacing: 0.006em;
     color: var(--color-white);
-    text-transform: uppercase;
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
     &:hover {
       @media (hover: hover) {
         border-style: var(--tw-border-style);
@@ -1636,32 +1606,9 @@
     }
   }
   .custom-dark-blue-btn {
-    cursor: pointer;
-    border-radius: 20px;
-    border-style: var(--tw-border-style);
-    border-width: 2px;
     border-color: var(--color-dark-blue);
     background-color: var(--color-dark-blue);
-    padding-inline: calc(var(--spacing) * 7);
-    padding-block: calc(var(--spacing) * 2);
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-    --tw-tracking: 0.006em;
-    letter-spacing: 0.006em;
     color: var(--color-white);
-    text-transform: uppercase;
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
     &:hover {
       @media (hover: hover) {
         border-style: var(--tw-border-style);
@@ -1685,32 +1632,9 @@
     }
   }
   .custom-light-blue-btn {
-    cursor: pointer;
-    border-radius: 20px;
-    border-style: var(--tw-border-style);
-    border-width: 2px;
     border-color: var(--color-lightblue);
     background-color: var(--color-lightblue);
-    padding-inline: calc(var(--spacing) * 7);
-    padding-block: calc(var(--spacing) * 2);
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-    --tw-tracking: 0.006em;
-    letter-spacing: 0.006em;
     color: var(--color-white);
-    text-transform: uppercase;
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
     &:hover {
       @media (hover: hover) {
         border-style: var(--tw-border-style);
@@ -1734,29 +1658,12 @@
     }
   }
   .custom-white-btn {
-    cursor: pointer;
-    border-radius: 20px;
     background-color: var(--color-white);
     padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 2.5);
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-    --tw-tracking: 0.006em;
-    letter-spacing: 0.006em;
     color: var(--color-green);
-    text-transform: uppercase;
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-green);
